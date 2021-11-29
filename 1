@@ -1,0 +1,70 @@
+import React, {useState} from 'react';
+
+function App() {
+
+  const [items, setItems] = useState([]);
+  //const [employeeID, setEmployeeID] = useState('');
+ // const [firstName, setFirstName] = useState('');
+  //const [lastName, setLastName] = useState('');
+  //const [age, setAge] = useState('');
+ //const [email, setEmail] = useState('');
+  const [name, setName ]= useState({employeeID: '', firstName: '', lastName: '', age: '', email: ''})
+
+  const handleInput = () => {
+    
+     
+    console.log(name);
+  };
+  return(
+<>
+<div>
+<input type = "number" 
+name="employeeid"
+className="form-input"
+placeholder="employeeid"
+value={name.employeeID}
+//onChange={e => setName({ ...name, employeeID: e.target.value})} 
+/>
+
+<input type = "text" 
+name="firstname"
+className="form-input"
+placeholder="firstname"
+value={name.firstName}
+//onChange={e => setName({ ...name, firstName: e.target.value})} 
+/>
+
+
+<input type = "text" 
+name="lastname"
+className="form-input"
+placeholder="lastname"
+value={name.lastName}
+
+//onChange={e => setName({ ...name, lastName: e.target.value})} 
+/>
+
+<input type = "number" 
+name="age"
+className="form-input" 
+placeholder="age"
+value={name.age}
+
+//onChange={e => setName({ ...name, age: e.target.value})} 
+/>
+
+<input type = "email" 
+name="email"
+className="form-input" 
+placeholder="email"
+value={name.email}
+
+//onChange={e => setName({ ...name, email: e.target.value})} 
+/>
+
+<button onClick = {() => handleInput()}> Add</button>
+</div>
+</>
+  );
+}
+export default App;
